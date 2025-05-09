@@ -1,0 +1,12 @@
+stock_data['MA20'] = stock_data['Close'].rolling(window=20).mean()
+stock_data['MA50'] = stock_data['Close'].rolling(window=50).mean()
+
+plt.figure(figsize=(12, 6))
+plt.plot(stock_data['Close'], label='Close Price')
+plt.plot(stock_data['MA20'], label='20-Day MA')
+plt.plot(stock_data['MA50'], label='50-Day MA')
+plt.title(f'{ticker} Moving Averages')
+plt.xlabel('Date')
+plt.ylabel('Price (USD)')
+plt.legend()
+plt.show()

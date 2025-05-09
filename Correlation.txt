@@ -1,0 +1,8 @@
+tickers = ['AAPL', 'MSFT', 'AMZN', 'GOOGL']
+data = yf.download(tickers, start='2024-01-01', end='2025-01-01')['Close']
+
+# Plot correlation heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(data.pct_change().corr(), annot=True, cmap='coolwarm')
+plt.title("Stock Correlation Matrix")
+plt.show()

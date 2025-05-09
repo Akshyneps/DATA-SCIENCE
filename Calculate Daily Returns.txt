@@ -1,0 +1,7 @@
+stock_data['Daily Return'] = stock_data['Close'].pct_change()
+
+plt.figure(figsize=(10, 5))
+stock_data['Daily Return'].plot(kind='hist', bins=50, alpha=0.7)
+plt.title(f'{ticker} Daily Returns Distribution')
+plt.xlabel('Daily Return')
+plt.show()

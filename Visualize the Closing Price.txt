@@ -1,0 +1,7 @@
+plt.figure(figsize=(12, 6))
+plt.plot(stock_data['Close'], label='Close Price')
+plt.title(f'{ticker} Closing Price (2024)')
+plt.xlabel('Date')
+plt.ylabel('Price (USD)')
+plt.legend()
+plt.show()
